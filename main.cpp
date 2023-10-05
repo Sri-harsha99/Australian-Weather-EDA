@@ -1,5 +1,5 @@
 // I have used a constant velocity model to forecast object locations. 
-// While I have looked into into the fundamentals of the Kalman filter to incorporate confidence score, 
+// While I have looked into the fundamentals of the Kalman filter to incorporate confidence score, 
 // I believe that the constant velocity model aligns well with the requirements of my Full Stack Co-op position application.
 
 
@@ -7,8 +7,6 @@
 // dimensions. 
 // Later, I predicted the locations of these 4 objects at t=5 using data from t=0. 
 // Then I compared generated data with ground truth and achived the precision and recall scores.
-// The ground truths are placed in such a way that object 1 and 2 gets a hit, but 3 and 4 doesn't.
-
 
 
 // Why IoU?
@@ -18,12 +16,11 @@
 
 
 // Also, this was mentioned in the question "FP: False Positive - A prediction is not matched to any label". My understanding is that false positive occurs when we 
-// identify prediction A to label C. But here, definition says when A is not matched to any label. I'm going with written definition
+// identify prediction A to label C. But here, definition says when A is not matched to any label. I'm going with written definition.
 
 // Again: TP: True Positive - A correct match between a prediction and a label
-// Here I am sligtly confused as line emphasizes "correct match" which indicates we have to compare same object's prediction and label.
-// Not just any prediction and label. But, prediction structure doesn't have ID data. 
-// And FP says "A prediction is not matched to any label". So, I'm conflicted, but going with TP "when any prediction matches with any label" 
+// Here I am slightly confused as line emphasizes "correct match" which indicates we have to compare same object's prediction and label.
+// Not just any prediction and label. But, prediction structure doesn't have ID data. So, I'm using indexes to achieve this
 
 // FN: When a lable doesn't get matched with any prediction.
 
